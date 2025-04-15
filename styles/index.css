@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 60px;
+  background-color: antiquewhite;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Contenedor del logo y navegación */
+.header_logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Estilos del nav */
+nav ul {
+  display: flex;
+  gap: 20px;
+  background: none;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #444;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Estilos sobre el inicio */
+
+.inicio {
+  padding: 0 20px;
+  background-image: url('../assets/imagenes/fondo.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  text-align: center;
+  color: #f4f4f4;
+}
+
+.inicio h1,
+.inicio p {
+  margin-top: 20px;
+}
+
+.inicio h1 {
+  font-size: 4rem;
+}
+
+.inicio p {
+  font-size: 2rem;
+}
+
+/* Estilos sobre about */
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 1500px;
+  margin: 100px;
+  padding: 100px;
+  width: 100%;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 140%;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.about h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.about p,
+.about span {
+  font-size: 1.6rem;
+}
+
+/* Estilos sobre agentes */
+
+.agentes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 1500px;
+  margin: 100px;
+  padding: 100px;
+  width: 100%;
+}
+
+.agentes-img {
+  flex: 1;
+}
+
+.agentes-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.agentes-texts {
+  flex: 1;
+}
+
+.agentes-texts h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.agentes-texts p {
+  font-size: 1.5rem;
+}
+
+/* Estilos sobre mapas */
+.mapas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 1500px;
+  margin: 100px;
+  padding: 100px;
+  width: 100%;
+}
+
+.mapas-text {
+  flex: 1;
+}
+
+.mapas-img {
+  flex: 1;
+}
+
+.mapas h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.mapas p {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.mapas-img img {
+  width: 140%;
+  height: 500px;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .header_logo {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .about,
+  .agentes,
+  .mapas {
+    flex-direction: column;
+    margin: 40px 20px;
+    gap: 20px;
+  }
+
+  .about-img img,
+  .mapas-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .inicio h1 {
+    font-size: 2.5rem;
+  }
+
+  .inicio p {
+    font-size: 1.2rem;
+  }
+
+  .about h2,
+  .mapas h2 {
+    font-size: 2.5rem;
+  }
+
+  .about p,
+  .about span,
+  .mapas p,
+  .agentes-texts p {
+    font-size: 1.2rem;
+  }
+
+  .agentes-texts h2 {
+    font-size: 2.5rem;
+  }
+
+  .agentes-img img {
+    width: 100%;
+    height: auto;
+  }
+}

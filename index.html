@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./styles/stylesFonts.css">
-  <link rel="stylesheet" href="./styles/normalices.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&family=Roboto:wght@400;700&family=Russo+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&family=Roboto:wght@400;700&family=Russo+One&display=swap"
+    rel="stylesheet">
 
 
   <link rel="icon" type="image/icon" href="./assets/icons8-valorando-48.png">
@@ -20,32 +20,44 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header>
-    <div class="header_logo">
-      <img class="logo" src="./assets/imagenes/icons8-valorando-48.png" alt="Logo principal" />
+    <div>
+      <div class="header-logo">
+        <img class="logo" src="./assets/imagenes/icons8-valorando-48.png" alt="Logo principal" />
+        <!-- Boton Hamburguesa -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+          <img src="./assets/iconos/menu.svg" alt="menu">
+        </button>
 
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#agentes">Agentes</a></li>
-          <li><a href="#mapas">Mapas</a></li>
-        </ul>
-      </nav>
+        <!-- Navegador -->
+        <nav class="nav" id="nav">
+          <ul class="navegador-lista">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#agentes">Agentes</a></li>
+            <li><a href="#mapas">Mapas</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
+  <!-- Main -->
   <main>
+    <!-- Presentación -->
     <section class="inicio" id="inicio">
-      <p class="roboto-regular">Un juego de disparos táctico 5v5 basado en personajes.</p>
-      <h1 class="russo-one-regular">Bienvenido a Valorant</h1>
+      <div class="inicio-texto">
+        <p>Un juego de disparos táctico 5v5 basado en personajes.</p>
+        <h1>Bienvenido a Valorant</h1>
+      </div>
     </section>
 
     <section class="about" id="about">
       <div class="about-text">
-        <h2 class="russo-one-regular">Somos Valorant</h2>
-        <p class="titillium-web-semibold">Desafia tus limites</p>
-        <span class="roboto-regular">Combina tu estilo y experecia en un escenario global y competitivo. Tienes 13
+        <h2>Somos Valorant</h2>
+        <p>Desafia tus limites</p>
+        <span>Combina tu estilo y experecia en un escenario global y competitivo. Tienes 13
           rondas para atacar y
           defender
           tu lado con armas precicas y habilidades tácticas.</span>
@@ -60,15 +72,15 @@
         <img src="./assets/imagenes/agentes.jpg" alt="Agentes" width="100%" height="100%" />
       </div>
       <div class="agentes-texts">
-        <h2 class="russo-one-regular">Agentes</h2>
+        <h2>Agentes</h2>
         <p>Conoce a los diferentes agentes que puedes elegir en el juego.</p>
       </div>
     </section>
 
     <section class="mapas" id="mapas">
       <div class="maps-text">
-        <h2 class="russo-one-regular">Mapas</h2>
-        <p class="titillium-web-semibold">Explora los diferentes mapas donde se desarrollan las partidas.</p>
+        <h2>Mapas</h2>
+        <p>Explora los diferentes mapas donde se desarrollan las partidas.</p>
       </div>
       <div class="maps-img">
         <img src="./assets/imagenes/maps.jpg" alt="Rotacion de mapas" class="maps-img" />
@@ -80,6 +92,16 @@
   <footer>
     <p>© 2023 Valorant. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('nav');
+
+    toggle.addEventListener('click', () => {
+      navbar.classList.toggle('show');
+    });
+  </script>
+
 
 </body>
 
